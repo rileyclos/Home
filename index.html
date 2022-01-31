@@ -1,127 +1,169 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Clos08 Github Page</title>
-    <style media="screen">
-      body {
-      background: #242328;
-      margin:0;
-      padding:0;
-      color: white;
-      font-family: sans-serif;
-    }
-      .file {
-        display: inline-block;
-        width: 240px;
-        height: 320px;
-        background: rgba(60, 50, 70, 0.2);
-        background-filter: blur(20px);
-        border-radius: 15px;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 20px;
-        cursor: pointer;
-        transition: 300ms ease;
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .file:hover {
-        width: 280px;
-        height: 400px;
-        margin-left: 10px;
-        margin-right: 10px;
-        mergin-top: 10px;
-        mergin-bottom: 10px;
-      }
-      .file:hover img {
-        width: 240px;
-        height: 240px;
-      }
-      .filecontainer {
-        width: 90%;
-        height: auto;
-        margin-left: 5%;
-        margin-top: 5%;
-        position: relative;
-        font-size: 13pt;
-      }
-      img {
-        width: 200px;
-        height: 200px;
-        border-radius: 10px;
-        transition: 300ms ease;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 style="text-align:center;">Clos08 Website</h1>
-    <div class="filecontainer" style="text-align:center;">
-      <h3>Files</h3><br>
-<div class="file">
-  <a href="https://drive.google.com/file/d/1hjCs344Te00myx42Ky0hBy32k7ebb_lq/view?usp=sharing"><img src="clpk11f.png" alt="Image"></a><br><br>
-  Clouse Pack 1.1
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;367;400;500;560;600;700;800;900&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Clos08 Public Files</title>
+		<style media="screen">
+			* {
+				scroll-behavior: smooth;
+				text-decoration: none;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: sans-serif;
+				font-family: Inter;
+				color: white;
+				font-shadow: 1px 1px 3px black;
+			}
+			#vanta-canvas {
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				z-index: -1;
+			}
+			#p {
+				font-weight: 367;
+			}
+			#b {
+				font-weight: 560;
+			}
+			#l {
+				font-weight: 100;
+			}
+			#h {
+				font-size: 50px;
+				font-weight: 560;
+				letter-spacing: 0.2px;
+			}
+			#sh {
+				font-size: 27px;
+				font-weight: 400;
+				letter-spacing: 0.1px;
+			}
+			.cover {
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				justify-content: left;
+				align-items: center;
+				padding-left: 60px;
+				padding-right: 60px;
+				box-sizing: border-box;
+				position: relative;
+			}
+			a {
+				text-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+			}
+			#file {
+				width: 100vw;
+				height: 60px;
+				background: transparent;
+				cursor: pointer;
+				transition: 200ms;
+				display: flex;
+				align-items: center;
+				padding-left: 10px;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+			#file:hover {
+				background: rgba(0,0,0,0.2);
+			}
+			#firstfile {
+				width: 100vw;
+				height: 50px;
+				background: transparent;
+				cursor: pointer;
+				transition: 200ms;
+				display: flex;
+				align-items: center;
+				padding-left: 7px;
+				padding-right: 7px;
+				box-sizing: border-box;
+			}
+			#firstfile:hover {
+				background: rgba(0,0,0,0.2);
+			}
+			#icon {
+				width: 40px;
+				height: 40px;
+				border: none;
+				border-radius: 6px;
+				margin-right: 10px;
+			}
+			#p {
+				color: white;
+				display: flex;
+				align-items: center;
+			}
+			#bdblur {
+				backdrop-filter: blur(20px);
+				background: rgba(0,0,0,0.2);
+				top: 100vh;
+				position: absolute;
+			}
+			#down {
+				top: 85vh;
+				width: 40px;
+				height: 40px;
+				left: calc(50vw - 20px);
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 100%;
+				background: rgba(0,0,0,0.2);
+				color: white;
+				text-decoration: none;
+				backdrop-filter: blur(10px);
+			}
+					</style>
+	</head>
+	<body>
+		<div id=vanta-canvas></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+		<script type="text/javascript">
+			VANTA.HALO({
+				el: '#vanta-canvas',
+				mouseControls: false,
+			  touchControls: false,
+			  gyroControls: false,
+			  minHeight: 200.00,
+			  minWidth: 200.00
+			})
+		</script>
+		<div class="cover">
+			<div>
+			<a id=h>Clos08 Public Files</a><br>
+			<a id=sh>A place I put files for people to download</a>
+			</div>
+			</div>
+			<a href=#firstfile id=down>&#9660;</a>
+							<div id=bdblur>
+			<div id=firstfile><a id=p href=https://drive.google.com/file/d/1hjCs344Te00myx42Ky0hBy32k7ebb_lq/view?usp=sharing><img id=icon src="clpk11f.png"></img>Clouse Pack 1.1</a></div>
+			<div id=file><a id=p href=https://drive.google.com/file/d/1bBNUzITjCLZPAwqmpeMv8jG_aOOKfVed/view?usp=sharing><img id=icon src="clpk11cf.png"></img>Clouse Pack 1.1 Updated Cobblestone</a></div>
+			<div id=file><a id=p href=https://drive.google.com/file/d/1mUwKD9fEPeSwvsM7zB2qGQrOr8QzSVCO/view?usp=sharing><img id=icon src="cpack1.png"></img>Clouse Pack 1.2</a></div>
+			<div id=file><a id=p href=https://github.com/Anifiedd/Home/raw/main/BoredGamesv1.0.zip><img id=icon src="bg10.png"></img>Bored Games 1.0</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&id=18QNkn-PHckcES2Ba0aeIgOI_o2PqqRqV><img id=icon src="bg10.png"></img>Bored Games 1.1</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&id=1nV15oL4Aattus3JYrSEgDq7s_C8N6zcA><img id=icon src="bg10.png"></img>Bored Games 1.1.1</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&id=1fCWTmgnTLcgsYdUUjnQHXskJa_ts_NNA><img id=icon src="bg12.png"></img>Bored Games 1.2</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&confirm=Q6Jw&id=1klZV0apXXCsrDNy8CS4y3fPD2FG5Hat0><img id=icon src="bg12.png"></img>Bored Games 1.2.1</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&id=1a3n2_dPuZE5gKuWzG2v99uKAVsjvJ3oN><img id=icon src="bg12.png"></img>Bored Games 1.2.2</a></div>
+			<div id=file><a id=p href=https://drive.google.com/file/d/11ogw61UUjLmTSepeWbKtDGfaj2cSoLHQ/view?usp=sharing><img id=icon src="bg12.png"></img>Bored Games 1.2.3d</a></div>
+			<div id=file><a id=p href=https://download936.mediafire.com/apyenn7o0zag/qhipwv6lo16m0ci/server159891+-+21+Jan+2022+23_48_38.zip><img id=icon src="cksmp0.png"></img>Cool Kids SMP World Download (Season 0)</a></div>
+			<div id=file><a id=p href=https://drive.google.com/uc?export=download&id=1CQ5I_JinuQraHD8bQsAFnhj-TqItPtA3><img id=icon src="bg12.png"></img>Bored Games 1.3</a></div>
+			<div id=file><a id=p href=https://download1582.mediafire.com/7i9hp9qraypg/b1d4rp24omk5sxf/boredgames1.3.1.zip><img id=icon src="bg13.png"></img>Bored Games 1.3.1</a></div>
+			<div id=file><a id=p href=https://download1084.mediafire.com/8uanqq80i2kg/l7dsnelrit8nkp6/Bored+Games+v1.4.zip><img id=icon src="bg13.png"></img>Bored Games 1.4</a></div>
 </div>
-<div class="file">
-  <a href="https://drive.google.com/file/d/1bBNUzITjCLZPAwqmpeMv8jG_aOOKfVed/view?usp=sharing"><img src="clpk11cf.png" alt="Image"></a><br><br>
-  Clouse Pack 1.1 (Updated Cobblestone)
-</div>
-<div class="file">
-  <a href="https://drive.google.com/file/d/1mUwKD9fEPeSwvsM7zB2qGQrOr8QzSVCO/view?usp=sharing"><img src="cpack1.png" alt="Image"></a><br><br>
-  Clouse Pack 1.2
-</div>
-<div class="file">
-  <a href="https://github.com/Anifiedd/Home/raw/main/BoredGamesv1.0.zip"><img src="bg10.png" alt="Image"></a><br><br>
-  Bored Games v1.0
-</div>
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&id=18QNkn-PHckcES2Ba0aeIgOI_o2PqqRqV"><img src="bg10.png" alt="Image"></a><br><br>
-  Bored Games v1.1
-</div>
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&id=1nV15oL4Aattus3JYrSEgDq7s_C8N6zcA"><img src="bg10.png" alt="Image"></a><br><br>
-  Bored Games v1.1.1
-</div>
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&id=1fCWTmgnTLcgsYdUUjnQHXskJa_ts_NNA"><img src="bg12.png" alt="Image"></a><br><br>
-  Bored Games v1.2
-</div>
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&confirm=Q6Jw&id=1klZV0apXXCsrDNy8CS4y3fPD2FG5Hat0"><img src="bg12.png" alt="Image"></a><br><br>
-  Bored Games v1.2.1
-</div>
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&id=1a3n2_dPuZE5gKuWzG2v99uKAVsjvJ3oN"><img src="bg12.png" alt="Image"></a><br><br>
-  Bored Games v1.2.1 (Updated Ball Chaser 1 Player)
-</div>
-<div class="file">
-  <a href="https://drive.google.com/file/d/11ogw61UUjLmTSepeWbKtDGfaj2cSoLHQ/view?usp=sharing"><img src="bg12.png" alt="Image"></a><br><br>
-  Bored Games File Dump 21.1.22
-</div>
-<div class="file">
-  <a href="https://download936.mediafire.com/apyenn7o0zag/qhipwv6lo16m0ci/server159891+-+21+Jan+2022+23_48_38.zip"><img src="cksmp0.png" alt="Image"></a><br><br>
-  CKSMP World (Season 0)
-</div>  
-<div class="file">
-  <a href="https://drive.google.com/uc?export=download&id=1CQ5I_JinuQraHD8bQsAFnhj-TqItPtA3"><img src="bg12.png" alt="Image"></a><br><br>
-  bored games v1.3
-</div>
-<div class="file">
-  <a href="https://download1582.mediafire.com/7i9hp9qraypg/b1d4rp24omk5sxf/boredgames1.3.1.zip"><img src="bg13.png" alt="Image"></a><br><br>
-  bored games v1.3.1
-</div>
-      <div class="file">
-  <a href="https://download1084.mediafire.com/8uanqq80i2kg/l7dsnelrit8nkp6/Bored+Games+v1.4.zip"><img src="bg13.png" alt="Image"></a><br><br>
-  bored games v1.4
-</div>
-      
-      </body>
+	</body>
 </html>
-<!--
-Use this format for the files
-<div class="file">
-  <a href=""><img src="" alt="Image"></a><br><br>
-  Hello World
-</div> -->
+<!-- font weight 367 for normal
+	font weight 560 for bold
+
+	<div id=file><a id=p href=""><img id=icon src=""></img></a></div>
+	--!>
